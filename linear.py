@@ -8,7 +8,7 @@ def load_data():
 
     # Ask user for file name
     file_path = input("Enter the .csv data file name: ")
-    file_path = f"LinearRegression/data/{file_path}.csv"
+    file_path = f"Data/{file_path}.csv"
 
     return pd.read_csv(file_path)
 
