@@ -39,6 +39,7 @@ def calculate_cost(X, Y, m):
 
     return J, W
 
+# Plot the regression line
 def plot_regression(X, Y, featureA, featureB, J, W):
     print("J: ", J)
     print("W0: ", W[0])
@@ -53,7 +54,8 @@ def plot_regression(X, Y, featureA, featureB, J, W):
     plt.ylabel(featureB)
     plt.legend(loc="best")
     plt.show()
-        
+
+# MAIN    
 data = load_data()
 m1 = len(data)
 featureA1 = data.columns[0]

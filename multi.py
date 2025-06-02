@@ -10,11 +10,11 @@ import matplotlib.pyplot as plt
 # Function to load in training data
 def load_data():
 
-    # Ask user for file name
+    # Asking user for file name
     file_path = input("Enter the .csv data file name: ")
     file_path = f"Data/{file_path}.csv"
     
-    # Read data and print column names
+    # Reading data and print column names
     df = pd.read_csv(file_path)
     print("The data headers are: ", list(df))
 
@@ -23,14 +23,14 @@ def load_data():
 # Function to make X and Y data matrix
 def matrix_maker(trainFeatures, featureB, m, data):
 
-    # First Create m by n array (n = number of features)
+    # Creating m by n array (n = number of features)
     data_array = data[trainFeatures].to_numpy()
     array_of_1s = np.ones([1, m]) # Create array of 1s
 
-    # Add 1s to make X matrix
+    # Adding 1s to make X matrix
     X = np.insert(data_array, 0, array_of_1s, axis=1)
 
-    # Create Y matrix
+    # Creating Y matrix
     Y = data[featureB].to_numpy()
 
     return X, Y
@@ -41,7 +41,7 @@ def calculate_cost(X, Y, m):
     B = np.dot(X.T, Y)
     W = np.dot(A, B)
 
-    # Caclulate J(w0, w1)
+    # Caclulating J(w0, w1)
     A = np.dot(X, W) - Y
     J = (1/m) * np.dot(A.T, A)
 
@@ -54,10 +54,10 @@ def calculate_cost(X, Y, m):
 # Function to plot the regression line and data
 def plot_regression(X, Y, featureA, featureB, W):
 
-    # Calculate the regression line
+    # Calculating the regression line
     regression_line = np.dot(X, W)
 
-    # Plot the figures and regression line
+    # Plotting the figures and regression line
     plt.figure()
     plt.scatter(X[:, 1], Y, color="blue", label="Training Data")
     plt.plot(X[:, 1], regression_line, color="red", label="Regression Line")
