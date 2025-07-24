@@ -1,7 +1,7 @@
 # Linear Regression Implementation from Scratch
 
 **Author:** Sai Yadavalli  
-**Version:** 1.0
+**Version:** 2.0
 
 A clean and efficient implementation of multiple linear regression using the normal equation method, built from scratch with NumPy and featuring comprehensive visualization capabilities.
 
